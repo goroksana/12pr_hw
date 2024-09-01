@@ -1,0 +1,9 @@
+<h2 *ngIf="user.id">Edit User</h2>
+<h2 *ngIf="!user.id">Add User</h2>
+
+<form (ngSubmit)="onSave()">
+  <label for="name">Name:</label>
+  <input id="name" [(ngModel)]="user.name" name="name" required>
+
+  <button type="submit">Save</button>
+</form>
